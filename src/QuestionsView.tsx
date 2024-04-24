@@ -1,7 +1,6 @@
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-// Define a type for the question
 type Question = {
     id: string;
     question: string;
@@ -12,7 +11,6 @@ type Question = {
 const QuestionsView = () => {
     const [questions, setQuestions] = useState<Question[]>([]);
 
-    // Function to fetch questions from the API
     useEffect(() => {
         const fetchQuestions = async () => {
             const response = await fetch('https://api.quizup.com/questions');
